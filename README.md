@@ -7,7 +7,7 @@ This can be used to emulate specialization in to a limited extent.
 
 # Example
 
-```rs
+```rust
 use coe::{Coerce, is_same};
 use core::ops::Add;
 fn foo<T: 'static + Copy + Add<Output = T>>(slice: &mut [T]) {
