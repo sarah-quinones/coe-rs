@@ -84,11 +84,13 @@ impl<'a, T: 'static, U: 'static> Coerce<&'a mut [U]> for &'a mut [T] {
     }
 }
 
+/// Free function that defers to the `Coerce` trait implementation.
 #[inline(always)]
 pub fn coerce<T: Coerce<U>, U>(value: T) -> U {
     value.coerce()
 }
 
+/// Similar to [`coerce`] but operates on any lifetime-free type.
 #[inline(always)]
 pub fn coerce_static<T: 'static, U: 'static>(value: T) -> U {
     assert_same::<T, U>();
