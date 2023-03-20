@@ -1,3 +1,6 @@
+[![Documentation](https://docs.rs/coe-rs/badge.svg)](https://docs.rs/coe-rs)
+[![Crate](https://img.shields.io/crates/v/coe-rs.svg)](https://crates.io/crates/coe-rs)
+
 `coe-rs` is a Rust library for coercing a value of a given type into the same type, in cases
 where the compiler can't prove the two types are equal.  
 This can be used to emulate specialization in to a limited extent.
